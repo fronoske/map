@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>坂道マップ on Google Map</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <style>
+#map {
+  height: 100%;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+    </style>
+  </head>
+  <body>
+    <div id="control-panel" style="background: white; padding: 5px;"">
+        <div>
+            <h2>レイヤー</h2>
+            <p>
+                <input type="checkbox" id="cb-slope" name="cb-layers" value="slope_line" checked>
+                <label for="cb-slope">坂道</label><br>
+                <input type="checkbox" id="cb-bus" name="cb-layers" value="bus">
+                <label for="cb-bus">バス</label><br>
+                <!--
+                <input type="checkbox" id="cb-place" name="cb-layers" value="place" checked>
+                <label for="cb-place">場所</label><br>
+                -->
+            </p>
+        </div>
+    </div>
+    <div id="map"></div>
+
+    <script src="./vector-tiles-google-maps.js"></script>
+    <script src="./draw-custom.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=weekly&callback=initMap&key=AIzaSyDYBUm_pB4MTCnb1qac07oaddmXyV61hLE" defer></script>
+  </body>
+</html>
