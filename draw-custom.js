@@ -44,18 +44,8 @@ function initMap() {
     });
     g_map.controls[google.maps.ControlPosition.TOP_RIGHT].push(document.getElementById("control-panel"));
 
+    // 持ち家候補のアイコンを表示する
     addIcons();
-    /* バスの geoJSON */
-    /*
-    g_map.data.loadGeoJson("N07-22_14.geojson");
-    g_map.data.setStyle((feature) => {
-        return {
-            strokeColor: "blue",
-            strokeOpacity: 0.5,
-            strokeWeight: 2, // getWeightByRoadClass(4, currentZoom)/2,
-        };
-    });
-*/
 
     // if tiles have not been loaded, GetTile will trigger twice.
     google.maps.event.addListenerOnce(g_map, "tilesloaded", function () {
