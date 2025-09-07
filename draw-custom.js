@@ -65,7 +65,7 @@ function initMap() {
 
 function initVectorTiles() {
     const options = {
-        url: "data/14-{x}-{y}.pbf",
+        url: "slope/14-{x}-{y}.pbf",
         debug: false,
         cache: true,
         sourceMaxZoom: 14,
