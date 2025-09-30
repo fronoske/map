@@ -124,6 +124,27 @@ function initVectorTiles() {
             }
         });
     }
+
+  /*
+    バス停をクリックするとその詳細を表示する。
+    → どうもデータがずれる。おそらく zoom に合わせたデータを取得していないため？
+    とりあえず無効にする。
+    g_map.addListener("click", function (event) {
+        g_mvtSource3.onClick(event, ShowSelectedFeatures, options);
+    });
+
+    function ShowSelectedFeatures(event) {
+        if (event.feature) {
+          // console.log(event.feature.properties);
+          const busStopName = event.feature.properties["P11_001"];
+          const corpName = event.feature.properties["P11_002"];
+          const routeName = event.feature.properties["P11_003_01"];
+          const tipText = `${busStopName}<br>${corpName}<br>${routeName}`;
+          console.log(tipText);
+          document.getElementById('info-box').innerHTML = tipText;
+        }
+    }
+  */
 }
 
 function drawArrow(tileContext, tile, style, mVTFeature) {
